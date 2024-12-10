@@ -10,18 +10,20 @@ import Home from "./pages/Home";
 import CreateUser from "./pages/CreateUser";
 import Users from "./pages/Users";
 import Update from "./pages/Update";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create-user" element={<CreateUser />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/edit/:id" element={<Update />} />
-        </Routes>
-      </Router>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create-user" element={<CreateUser />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/edit/:id" element={<Update />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
   );
 }
 
