@@ -13,7 +13,6 @@ import Update from "./pages/Update";
 
 function App() {
   return (
-    <BrowserRouter>
       <Router>
         <Header />
         <Routes>
@@ -23,7 +22,6 @@ function App() {
           <Route path="/edit/:id" element={<Update />} />
         </Routes>
       </Router>
-    </BrowserRouter>
   );
 }
 
